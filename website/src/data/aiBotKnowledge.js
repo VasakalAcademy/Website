@@ -80,22 +80,24 @@ export const processAcademyQuery = (rawQuery) => {
   // 1. STRICT DOMAIN GUARD CHECK
   const isOutOfScope = OUT_OF_SCOPE_PATTERNS.some(regex => regex.test(query));
   // Exceptions if they mention academy/exam context together
-  const hasAcademyContext = /\b(vasakal|v 30|v30|super 30|super30|neet|jee|hostel|bodinayakanur|narayana|foundation|admission|enroll|faculty|syllabus)\b/i.test(query);
+  const hasAcademyContext = /\b(vasakal|v 30|v30|super 30|super30|neet|jee|hostel|bodinayakanur|bodi|theni|tuition|tution|narayana|foundation|admission|enroll|faculty|syllabus)\b/i.test(query);
 
   if (isOutOfScope && !hasAcademyContext) {
     return {
       text: `🛡️ **Vasakal Academy Domain Notice**:
-I am the **Vasakal Academy AI Assistant**, dedicated **strictly and exclusively** to information about **Vasakal Academy** (our courses, V 30 program, hostel amenities, faculty experts, admissions, and Bodinayakanur campus).
+I am the **Vasakal Academy AI Assistant**, dedicated **strictly and exclusively** to information about **Vasakal Academy** (our NEET & JEE coaching, best tuition classes, foundation class teaching, V 30 program, hostel amenities, faculty experts, admissions, and Bodinayakanur campus).
 
 I am not permitted to answer general trivia, programming, or external topics.
 
 **Here is what I can direct you to on this website:**
+- 🎯 **Best NEET & IIT-JEE Coaching** in Bodinayakanur (Bodi), Theni
+- 📖 **Best School Tuition Classes** (Classes 6th to 12th CBSE & State)
+- 📚 **Foundation Class Teaching** (Class 4th to 10th)
 - 🚀 **V 30 Batch** for NEET & JEE Repeaters
-- 📚 **Foundation Academic Program** (Class 4th to 10th)
 - 🏠 **Separate Hostels** for Boys and Girls with food & 24/7 security
 - 👨‍🏫 **Senior Faculty Mentors** (Math, Physics, Chemistry, Biology)
 - 📝 **Admissions & Online Enrollment Form**
-- 📍 **Campus Location** (Bodinayakanur) & Direct Phone Support
+- 📍 **Campus Location** (Bodinayakanur, Theni District) & Direct Phone Support
 
 What would you like to explore regarding Vasakal Academy?`,
       actions: [
@@ -174,9 +176,42 @@ Let me take you to the Hostel section to view photos and details!`,
     };
   }
 
-  // 4. FOUNDATION COURSES / CLASS 4 TO 10
+  // 4. BEST TUITION & SCHOOL TUITION (CLASSES 6th to 12th)
+  if (
+    query.includes("tuition") ||
+    query.includes("tution") ||
+    query.includes("coaching class") ||
+    query.includes("school tuition") ||
+    query.includes("cbse tuition") ||
+    query.includes("state board tuition") ||
+    query.includes("best tuition")
+  ) {
+    return {
+      text: `📖 **Best School Tuition Classes in Bodinayakanur (Bodi), Theni District**
+
+Vasakal Academy is the top-rated tuition center in Bodinayakanur for **Classes 6th to 12th** (CBSE & Tamil Nadu State Board):
+
+- 🎯 **Comprehensive Subject Mastery:** Mathematics, Physics, Chemistry, and Biology taught with deep conceptual clarity.
+- 👨‍🏫 **Senior Academic Mentors:** Veteran faculty with decades of experience who simplify complex board theory and numericals.
+- 👥 **Small Batch Sizes:** Guaranteed personal attention and individualized learning speeds.
+- 📝 **Regular Tests & Assessments:** Topic-wise worksheets, board pattern question papers, and continuous feedback.
+- 📞 **Weekday Doubt Clearance:** Dedicated phone support and hand-holding so students never stay stuck on homework or exam concepts.
+
+Would you like to explore our programs or fill the enrollment form?`,
+      actions: [
+        { label: "👉 View Tuition Programs", targetId: "programs" },
+        { label: "👉 Explore Foundation (Class 4-10)", targetId: "foundation" },
+        { label: "📝 Enroll for Tuition", externalUrl: ENROLLMENT_FORM_URL },
+        { label: "📞 Call Admissions (9842863113)", phoneUrl: "tel:9842863113" }
+      ]
+    };
+  }
+
+  // 5. FOUNDATION COURSES / CLASS 4 TO 10 / FOUNDATION TEACHING
   if (
     query.includes("foundation") ||
+    query.includes("foundation class") ||
+    query.includes("foundation teaching") ||
     query.includes("class 6") ||
     query.includes("class 7") ||
     query.includes("class 8") ||
@@ -191,17 +226,17 @@ Let me take you to the Hostel section to view photos and details!`,
     query.includes("state board")
   ) {
     return {
-      text: `📚 **Vasakal Foundation Program (Classes 4th to 10th)**
+      text: `📚 **Premier Foundation Class Teaching in Bodinayakanur (Bodi), Theni District**
 
-Our Foundation curriculum is structured to build competitive mindset early:
+Vasakal Academy's 7-year structured foundation curriculum is engineered to build competitive mindsets and school board excellence early:
 
-- ⏳ **7-Year Progression vs 2-Year Rush:** Starting from middle school gives students optimum mind maturity, eliminating the huge leap/shock in Class 11th.
+- ⏳ **7-Year Progression vs 2-Year Rush:** Starting from Class 6th (and Class 4th-5th talent batches) gives students natural conceptual maturity, eliminating the steep leap and stress between 10th and 11th.
 - 🌀 **Spiral Curriculum Architecture:**
   - *7th Class:* Revision & prerequisite strengthening.
   - *8th Class:* In-depth core topic mastery and analytical deduction.
   - *9th Class:* Early preview and bridge basics of 10th & 11th concepts.
 - 🌐 **Multi-Board Synergy:** Integrates CBSE, ICSE, and Tamil Nadu State Board syllabi with competitive orientation (NEET, JEE, NTSE, Olympiads).
-- 📊 **OMR & Multi-Perspective Testing:** Single-correct, multi-correct, and matrix-matching formats to master competitive thinking.
+- 📊 **OMR & Multi-Perspective Testing:** Single-correct, multi-correct, and matrix-matching formats to master competitive thinking early.
 
 Shall I take you to the Foundation section or Programs section?`,
       actions: [
@@ -212,7 +247,7 @@ Shall I take you to the Foundation section or Programs section?`,
     };
   }
 
-  // 5. NEET & MEDICAL / JEE & ENGINEERING
+  // 6. NEET & MEDICAL / JEE & ENGINEERING (BODINAYAKANUR / THENI)
   if (
     query.includes("neet") ||
     query.includes("medical") ||
@@ -225,7 +260,9 @@ Shall I take you to the Foundation section or Programs section?`,
     query.includes("aiims")
   ) {
     return {
-      text: `🎯 **NEET & IIT-JEE Excellence Tracks at Vasakal Academy**
+      text: `🎯 **Best NEET & IIT-JEE Coaching in Bodinayakanur (Bodi), Theni District**
+
+Vasakal Academy is the leading center for premier medical and engineering entrance training across Theni District:
 
 - 🩺 **Doctor / NEET Track:**
   Deep conceptual command across Biology (Botany & Zoology), Chemistry, and Physics. High-speed accuracy training, visual synthesis, and mock drills targeted at premier government medical colleges and AIIMS.
@@ -235,6 +272,7 @@ Shall I take you to the Foundation section or Programs section?`,
   1. *Foundation Track (Class 4th-10th)*
   2. *Integrated Academic Program (Class 11th-12th)*
   3. *V 30 Dedicated Repeaters Batch (30 Seats)*
+- 🏠 **Separate Boys & Girls Hostels** with 24/7 security for outstation students in Theni district!
 
 Where would you like to navigate?`,
       actions: [
@@ -309,7 +347,7 @@ Joining Vasakal Academy is simple and transparent:
     };
   }
 
-  // 8. CONTACT / PHONE / ADDRESS / LOCATION / MAP / TIMINGS
+  // 9. CONTACT / PHONE / ADDRESS / LOCATION / MAP / TIMINGS (BODI / THENI)
   if (
     query.includes("contact") ||
     query.includes("phone") ||
@@ -321,6 +359,8 @@ Joining Vasakal Academy is simple and transparent:
     query.includes("where") ||
     query.includes("map") ||
     query.includes("bodinayakanur") ||
+    query.includes("bodi") ||
+    query.includes("theni") ||
     query.includes("email")
   ) {
     return {

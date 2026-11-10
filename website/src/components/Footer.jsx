@@ -126,7 +126,7 @@ export const Footer = () => {
             <a href="https://guruveeraprasath.vercel.app/" target="_blank" rel="noopener noreferrer">Developed by GuruVeeraprasath M</a>
           </div>
           <p className="text-center sm:text-right text-slate-300">
-            Shaping the Real Professionals • Thasildar Office Road, Bodinayakanur - 625513
+            Best NEET &amp; JEE Coaching • Foundation Classes &amp; Tuition • Bodinayakanur (Bodi), Theni District - 625513
           </p>
         </div>
       </div>

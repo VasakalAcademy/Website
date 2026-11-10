@@ -86,9 +86,10 @@ export const HeroSection = () => {
   };
 
   const highlights = [
-    "Foundation from Class 6th",
-    "Expert Academic Panel",
-    "NEET & IIT-JEE Ready"
+    "Best Tuition & Foundation",
+    "NEET & IIT-JEE Coaching",
+    "Bodinayakanur • Theni District",
+    "V 30 Intensive Batch"
   ];
 
   return (
@@ -117,7 +118,7 @@ export const HeroSection = () => {
             >
               <span className="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-ping shrink-0" />
               <span className="text-[11px] sm:text-sm font-semibold tracking-wide text-[#071A3D] dark:text-white">
-                Vasakal Academy • Bodinayakanur
+                Vasakal Academy • Bodinayakanur (Bodi), Theni
               </span>
               <span className="text-[10px] sm:text-xs bg-[#DCE8FF] dark:bg-blue-600 text-[#071A3D] dark:text-white font-bold px-2 py-0.5 rounded-full shrink-0">
                 Admissions Open
@@ -147,7 +148,7 @@ export const HeroSection = () => {
               variants={itemVariants}
               className="text-sm sm:text-base md:text-lg text-[#475569] dark:text-slate-100 max-w-xl mb-5 leading-relaxed"
             >
-              High-quality personalized learning, expert guidance, and a 7-year integrated approach to give every student a decisive competitive edge.
+              Premier institute in Bodinayakanur (Bodi), Theni District for NEET, IIT-JEE coaching, top school tuition (Classes 6th–12th CBSE &amp; State Board), and 7-year structured foundation class teaching.
             </motion.p>
 
             {/* Key Highlights */}

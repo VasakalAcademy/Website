@@ -3,18 +3,19 @@ export const ENROLLMENT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdq
 
 export const ACADEMY_INFO = {
   name: "VASAKAL ACADEMY",
-  tagline: "Turning Aspirants into Achievers",
+  tagline: "Best NEET & JEE Coaching, Foundation Classes & Tuition in Bodinayakanur, Theni",
   seminarTitle: "Seminar for Life Goal - Shaping the Real Professionals",
-  mission: "Vasakal Academy is founded in an effort to give students a competitive edge in all their future endeavours and prepare them for Global context.",
-  subMission: "Through specially crafted live instructions and individualized analysis, Vasakal academy's experts will be with you every step of the way.",
-  learningApproach: "High Quality Personalized Learning",
+  mission: "Vasakal Academy is the premier coaching institute in Bodinayakanur (Bodi), Theni District for NEET, IIT-JEE, foundation class teaching, and school tuition from Class 6th to 12th.",
+  subMission: "Through specially crafted live instructions, small batch sizes, and individualized analysis, Vasakal Academy's experts guide every student towards academic excellence and top ranks.",
+  learningApproach: "High Quality Personalized Learning & Best Tuition",
   philosophy: "Learning should combine strong fundamentals, application, practice, assessment and continuous improvement.",
   motto: "Empowering minds. Building futures. Creating leaders of tomorrow.",
   contacts: {
     phones: ["9842863113", "+914546462773", "9944789783"],
     email: "vasakalacademy@gmail.com",
-    address: "Thasildar Office Road, Bodinayakanur - 625513",
-    mapQuery: "Thasildar Office Road, Bodinayakanur, Tamil Nadu 625513"
+    address: "Thasildar Office Road, Bodinayakanur - 625513, Theni District, Tamil Nadu",
+    locationSummary: "Bodinayakanur (Bodi), Theni District",
+    mapQuery: "Thasildar Office Road, Bodinayakanur, Theni District, Tamil Nadu 625513"
   }
 };
 
@@ -116,7 +117,7 @@ export const CHALLENGES_VS_SOLUTION = {
 };
 
 export const FOUNDATION_DATA = {
-  intro: "Foundation courses help students nourish their skills at early stages and strengthen concepts and fundamental capabilities.",
+  intro: "Vasakal Academy provides premier foundation class teaching in Bodinayakanur (Bodi), Theni District. Our 7-year structured curriculum nourishes skills at early stages, strengthening concepts and analytical problem solving for school exams, Olympiads, NEET, and IIT-JEE.",
   timelineComparison: {
     afterTenth: {
       tenure: "2 Years Only",
@@ -219,43 +220,43 @@ export const FOUNDATION_DATA = {
 export const PROGRAMS = [
   {
     id: "foundation-middle",
-    badge: "Class 4th to 10th",
-    title: "Foundation-Focused Academic Program",
-    description: "Concept reinforcement, bifurcated syllabus, analytical reasoning, and early talent exam orientation for CBSE, ICSE, and State board students.",
+    badge: "Class 4th to 10th (CBSE & State Board)",
+    title: "Best School Tuition & Foundation Classes",
+    description: "Premier foundation class teaching and top school tuition for students in Bodinayakanur (Bodi) and across Theni district. Deep concept grounding in Mathematics, Physics, Chemistry & Biology for board exams, talent Olympiads, and early NEET/JEE readiness.",
     features: [
-      "Deep concept grounding in Mathematics, Physics, Chemistry & Biology",
-      "Experiential learning and hands-on activities",
+      "Best tuition classes for CBSE, ICSE & Tamil Nadu State Board",
+      "Structured foundation class teaching from Class 4th to 10th",
+      "Experiential learning, concept mastery & hands-on activities",
       "Regular question papers and OMR-based performance analysis",
-      "Exposure to Olympiads and talent examinations",
-      "Continuous engagement throughout the academic year"
+      "Continuous engagement & weekday doubt support in Bodi"
     ],
     icon: "BookOpen"
   },
   {
     id: "advanced-secondary",
     badge: "Class 11th to 12th",
-    title: "Advanced Academic & Concept Reinforcement",
-    description: "High-intensity conceptual coaching bridging board excellence with premier competitive exam requirements.",
+    title: "Advanced Academic Tuition & Concept Reinforcement",
+    description: "High-intensity conceptual coaching and senior secondary tuition bridging board exams with premier competitive entrance requirements in Bodinayakanur, Theni.",
     features: [
-      "Rigorous alignment of subjective board syllabus with objective patterns",
+      "Subject-specialist tuition in Physics, Chemistry, Maths & Biology",
+      "Rigorous alignment of State & CBSE board syllabus with competitive patterns",
       "Subject-matter specialist faculty mentorship",
-      "Time management & question classification strategies",
-      "Comprehensive chapter-wise worksheets and mock test series",
-      "Individual doubt resolution and performance counseling"
+      "Chapter-wise worksheets, test series & individual doubt clearance",
+      "Personalized score enhancement and time-management training"
     ],
     icon: "GraduationCap"
   },
   {
     id: "competitive-career",
-    badge: "Competitive Exams",
-    title: "NEET / IIT-JEE / Olympiad & NTSE Track",
-    description: "Targeted competitive training engineered to convert ambitious aspirants into top-tier national achievers.",
+    badge: "NEET & IIT-JEE (Bodi, Theni)",
+    title: "NEET / IIT-JEE Coaching & V 30 Batch",
+    description: "Targeted competitive training and repeater coaching in Bodinayakanur (Bodi), Theni district, engineered to convert ambitious aspirants into top-tier national achievers.",
     features: [
+      "NEET UG comprehensive medical coaching by veteran faculty",
       "IIT-JEE Mains & Advanced integrated syllabus",
-      "NEET UG comprehensive medical coaching",
-      "NTSE & National Olympiad preparation module",
+      "Exclusive V 30 intensive repeaters batch (capped at 30 seats)",
       "Single-correct, multi-correct & matrix-matching drills",
-      "Weekday telephonic academic support & mentorship"
+      "Daily OMR mock testing and weekday phone mentorship"
     ],
     icon: "Trophy"
   }

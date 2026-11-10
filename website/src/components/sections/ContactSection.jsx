@@ -43,7 +43,7 @@ Thank you.`
             Any Queries? We Are Here To Help
           </h2>
           <p className="text-sm sm:text-base text-[#475569] dark:text-slate-100 font-medium">
-            Take the first step towards academic transformation. Connect directly with our administration or visit our Bodinayakanur campus.
+            Take the first step towards academic transformation. Connect directly with our administration or visit our campus in Bodinayakanur (Bodi), Theni District.
           </p>
         </div>
 
