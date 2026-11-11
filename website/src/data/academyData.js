@@ -419,6 +419,17 @@ export const GALLERY_ITEMS = [
   },
   {
     id: 4,
+    title: "Great 50 celebration",
+    category: "Activities",
+    image: "/assets/slides/great_50_1.jpeg",
+    images: [
+      "/assets/slides/great_50_1.jpeg",
+      "/assets/slides/great_50_2.jpeg"
+    ],
+    description: "A journey of refreshment in cool climate of Munnar."
+  },
+  {
+    id: 5,
     title: "Munnar Trip for Refreshment",
     category: "Activities",
     image: "/assets/slides/munnar_trip.jpeg",
@@ -428,7 +439,7 @@ export const GALLERY_ITEMS = [
     description: "A journey of refreshment in cool climate of Munnar."
   },
   {
-    id: 5,
+    id: 6,
     title: "Foundation Spiral Design Architecture",
     category: "Classes",
     image: "/assets/slides/Foundation.jpeg",
@@ -442,7 +453,7 @@ export const GALLERY_ITEMS = [
   //   description: "Guiding students toward Engineering, Medicine, CA, and Civil Services."
   // },
   {
-    id: 6,
+    id: 7,
     title: "Smart Teaching Room",
     category: "Academy",
     image: "/assets/slides/Smart_room.jpeg",
@@ -456,14 +467,14 @@ export const GALLERY_ITEMS = [
   //   description: "Parent and student seminar discussing the benefits of starting early from Class 6th."
   // },
   {
-    id: 7,
+    id: 8,
     title: "Deep Level of Teaching",
     category: "Academy",
     image: "/assets/slides/DeepTeaching.jpeg",
     description: "Delivering subject expertise through the ‘Ask, Reason, Apply, Link, Predict’ learning cycle."
   },
   {
-    id: 8,
+    id: 9,
     title: "krishna Jayanthi",
     category: "Activities",
     image: "/assets/slides/krishna_jayanthi.jpeg",
@@ -474,18 +485,20 @@ export const GALLERY_ITEMS = [
     description: "Celebration of Krishna Jayanthi."
   },
   {
-    id: 9,
+    id: 10,
     title: "Bodinayakanur Offline Campus Center",
     category: "Academy",
     image: "/assets/slides/Academy entrance.jpeg",
     description: "Thasildar Office Road center providing personalized hand-holding and support."
   },
   {
-    id: 10,
+    id: 11,
     title: "Pre-Diwali Celebrations",
     category: "Activities",
-    image:[
-      "/assets/slides/Diwali_1.jpeg"
+    images:[
+      "/assets/slides/Diwali_1.jpeg",
+      "/assets/slides/Diwali_2.jpeg",
+      "/assets/slides/Diwali_3.jpeg"
     ],
     description: "Our Pre-Diwali Celebrations filled the campus with joy, cultural vibrancy, and enthusiastic participation from students and faculty."
   }
